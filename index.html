@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link href="project/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="project/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="background"></div>
+    <header class="title">
+        <h1>Portfolio</h1>
+    </header>
+    <img alt="Logo" src="project/img/logo.webp" class="logo">
+    <nav class="button-container">
+        <button id="aboutBtn">About Me</button>
+        <button id="workBtn">My Work</button>
+        <button id="contactBtn">Contact Me</button>
+    </nav>
+    <main class="container">
+        <section class="box" id="aboutSection">
+            <h2>About Me</h2>
+            <p>
+                My name is Nguyen Phuong Minh Tan, and I am a high school student from Vietnam with a passion for technology and creativity. 
+                As a senior Python and web developer, I create efficient and innovative solutions. I also have experience as a graphic designer, video editor, and colorist, blending technical and artistic skills into my projects.
+            </p>
+        </section>
+        <section class="box" id="workSection">
+            <h2>My Work</h2>
+            <p>
+                Here are some of my notable projects: my graphics skills, and some creative designs for social media. Stay tuned for more updates as I continue my journey!
+            </p>
+            <div id="imageWrapper">
+                <div id="line" class="line top">
+                    <img class="thumbnail" alt="My Work" src="project/img/Kaoru.png">
+                    <img class="thumbnail" alt="My Work" src="image2.jpg">
+                    <img class="thumbnail" alt="My Work" src="image3.jpg">
+                    <img class="thumbnail" alt="My Work" src="image4.jpg">
+                    <img class="thumbnail" alt="My Work" src="image5.jpg">
+                    <img class="thumbnail" alt="My Work" src="image6.jpg">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal">
+        <div id="modalContent">
+            <img alt="Enlarged image" src="" id="modalImg">
+            <button id="closeBtn" class="closeBtn">
+                <i class="fa-brands fa-x-twitter"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="contactModal">
+        <div id="contactModalContent">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Your Name:</label>
+                <input id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Your Email:</label>
+                <input id="email" name="email" placeholder="Your Email" required type="email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button id="sendBtn" type="submit">Send</button>
+            </form>
+            <button id="closeContactBtn" class="closeBtn">X</button>
+        </div>
+    </div>
+
+    <script src="project/js/fucku.js"></script>
+</body>
+</html>

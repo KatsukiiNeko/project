@@ -1,0 +1,240 @@
+body {
+    font-family: "Inconsolata", sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: radial-gradient(circle, #6700a3, #551499, #451c8d, #362081, #292174, #211f6a, #1a1d61, #141b57, #0f184f, #0b1447, #061140, #050c38);
+    color: #fefefe;
+}
+
+.logo {
+    position: fixed; 
+    top: 30px;
+    left: 17px;
+    z-index: -1;
+    display: block;
+    width: 5vw;
+    height: auto;
+    border-radius: 10%;
+    user-select: none;
+    transition: width 0.3s ease;
+    max-width: 130px;
+    min-width: 40px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #6700a3, #551499, #451c8d, #362081, #292174, #211f6a, #1a1d61, #141b57, #0f184f, #0b1447, #061140, #050c38);
+    z-index: -1;
+}
+
+.title {
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+    animation: title-reveal 2s ease-out forwards;
+    user-select: none;
+}
+
+@keyframes title-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+button {
+    padding: 10px 20px;
+    border: 3px;
+    border-color: #fefefe;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fefefe;
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.box {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: box-reveal 0.5s ease-out forwards;
+}
+
+.box.active {
+    display: block;
+}
+
+@keyframes box-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid layout for images */
+#line {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Flexible columns */
+    gap: 10px;  /* Space between images */
+    justify-items: center;  /* Center images within the grid */
+    width: 100%;  /* Ensure it takes up the full width */
+}
+
+.thumbnail {
+    width: 100%;
+    max-width: 150px;  /* Keep images small */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Ensure the image covers the grid cell */
+    border-radius: 10%;  /* Rounded corners */
+    transition: transform 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);  /* Slightly increase size on hover */
+}
+
+/* Modal styles for expanded image */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#modalContent {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#modalImg {
+    width: 100%;
+    height: auto;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -35px;
+    right: -40px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: #fefefe;
+}
+
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#contactModalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#closeContactBtn {
+    position: absolute;
+    top: -35px;
+    right: -40px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+#closeContactBtn:hover {
+    font-size: 1.3rem;
+}
